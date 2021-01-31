@@ -25,6 +25,7 @@ export const LoginPage = ({navigation}) => {
 
       await loginHandler(email, password);
       await signIn();
+      
      
     }
   }
