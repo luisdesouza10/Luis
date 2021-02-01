@@ -10,9 +10,6 @@ export const LoginPage = ({navigation}) => {
   const [password, setPassword] = React.useState('');
   const {signIn} = React.useContext(AuthContext);
 
-  // const [token, setToken] = React.useState('');
-  // const [error, seterror] = React.useState('');
-
   async function entrar() {
 
     let userToken = await AsyncStorage.getItem('token');
@@ -26,10 +23,8 @@ export const LoginPage = ({navigation}) => {
       await loginHandler(email, password);
       await signIn();
       
-     
     }
   }
-
     return (
       <View style={styles.container}>
         <StatusBar  
@@ -65,7 +60,6 @@ export const LoginPage = ({navigation}) => {
       
     );
   }
-
 
 const styles = StyleSheet.create({
   container: {
